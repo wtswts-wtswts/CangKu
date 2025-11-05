@@ -1,0 +1,245 @@
+11:23:21 INFO: Starting trainer on device: cuda
+11:23:21 INFO: Args: Namespace(data_path='C:\\path\\to\\Falkenauer_U.txt', max_instances=2, hidden_size=128, num_gcn_layers=3, epochs=1, steps_per_epoch=64, ppo_epochs=1, minibatch_size=8, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=False, max_actions_per_stage=200, seed=42, log_interval=100, verbose_steps=False)
+11:23:21 ERROR: No instances loaded. Provide a valid dataset path or use auto_load.
+11:24:35 INFO: Starting trainer on device: cuda
+11:24:35 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Scholl 1.tx', max_instances=2, hidden_size=128, num_gcn_layers=3, epochs=1, steps_per_epoch=64, ppo_epochs=1, minibatch_size=8, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=False, max_actions_per_stage=200, seed=42, log_interval=100, verbose_steps=False)
+11:24:35 ERROR: No instances loaded. Provide a valid dataset path or use auto_load.
+11:25:50 INFO: Starting trainer on device: cuda
+11:25:50 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Scholl 1.txt', max_instances=2, hidden_size=128, num_gcn_layers=3, epochs=1, steps_per_epoch=64, ppo_epochs=1, minibatch_size=8, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=False, max_actions_per_stage=200, seed=42, log_interval=100, verbose_steps=False)
+11:25:50 INFO: Parsed 20 instances using fallback parser
+11:25:50 INFO: Loaded 2 instances
+11:27:35 INFO: [Epoch 1/1] Step 64/64 (global 64) inst=u120_01 reward=1.0000 rc=0.0313 infeasible=False action_idx=9
+11:27:36 INFO: [Epoch 1/1] epoch_summary avg_return=1.0000 avg_rc=0.1183 neg_rc_ratio=0.0000 diversity=2.8750 time_s=103.93 lr=3.000000e-04
+11:27:36 INFO: Saved checkpoint: logs\best_model_epoch1.pt
+11:27:36 INFO: Training finished
+11:27:41 INFO: Starting trainer on device: cuda
+11:27:41 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Scholl 1.txt', max_instances=100, hidden_size=128, num_gcn_layers=3, epochs=100, steps_per_epoch=2048, ppo_epochs=4, minibatch_size=64, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=True, max_actions_per_stage=200, seed=42, log_interval=200, verbose_steps=False)
+11:27:41 INFO: Parsed 20 instances using fallback parser
+11:27:41 INFO: Loaded 20 instances
+11:33:13 INFO: [Epoch 1/100] Step 200/2048 (global 200) inst=u120_19 reward=1.0000 rc=0.2113 infeasible=False action_idx=43
+11:38:48 INFO: [Epoch 1/100] Step 400/2048 (global 400) inst=u120_19 reward=1.0000 rc=0.1606 infeasible=False action_idx=5
+11:44:22 INFO: [Epoch 1/100] Step 600/2048 (global 600) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=99
+11:50:00 INFO: [Epoch 1/100] Step 800/2048 (global 800) inst=u120_19 reward=1.0000 rc=0.7183 infeasible=False action_idx=30
+11:55:41 INFO: [Epoch 1/100] Step 1000/2048 (global 1000) inst=u120_19 reward=1.0000 rc=0.7437 infeasible=False action_idx=25
+12:01:23 INFO: [Epoch 1/100] Step 1200/2048 (global 1200) inst=u120_19 reward=1.0000 rc=0.7070 infeasible=False action_idx=34
+12:13:02 INFO: [Epoch 1/100] Step 1400/2048 (global 1400) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=2
+12:32:16 INFO: Starting trainer on device: cuda
+12:32:16 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Scholl 1.txt', max_instances=100, hidden_size=128, num_gcn_layers=3, epochs=1, steps_per_epoch=2048, ppo_epochs=4, minibatch_size=64, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=True, max_actions_per_stage=200, seed=42, log_interval=200, verbose_steps=False)
+12:32:16 INFO: Parsed 20 instances using fallback parser
+12:32:16 INFO: Loaded 20 instances
+12:42:42 INFO: [Epoch 1/1] Step 200/2048 (global 200) inst=u120_19 reward=1.0000 rc=0.2113 infeasible=False action_idx=43
+12:51:09 INFO: [Epoch 1/1] Step 400/2048 (global 400) inst=u120_19 reward=1.0000 rc=0.1606 infeasible=False action_idx=5
+12:57:17 INFO: [Epoch 1/1] Step 600/2048 (global 600) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=99
+13:03:05 INFO: [Epoch 1/1] Step 800/2048 (global 800) inst=u120_19 reward=1.0000 rc=0.7183 infeasible=False action_idx=30
+13:09:00 INFO: [Epoch 1/1] Step 1000/2048 (global 1000) inst=u120_19 reward=1.0000 rc=0.7437 infeasible=False action_idx=25
+13:14:50 INFO: [Epoch 1/1] Step 1200/2048 (global 1200) inst=u120_19 reward=1.0000 rc=0.7070 infeasible=False action_idx=34
+13:21:29 INFO: [Epoch 1/1] Step 1400/2048 (global 1400) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=2
+13:26:07 INFO: Starting trainer on device: cuda
+13:26:07 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Scholl 1.txt', max_instances=2, hidden_size=128, num_gcn_layers=3, epochs=1, steps_per_epoch=64, ppo_epochs=1, minibatch_size=8, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=False, max_actions_per_stage=200, seed=42, log_interval=10, verbose_steps=False)
+13:26:07 INFO: Parsed 20 instances using fallback parser
+13:26:07 INFO: Loaded 2 instances
+13:26:27 INFO: [Epoch 1/1] Step 10/64 (global 10) inst=u120_01 reward=1.0000 rc=0.1048 infeasible=False action_idx=113
+13:26:44 INFO: [Epoch 1/1] Step 20/64 (global 20) inst=u120_01 reward=1.0000 rc=0.0901 infeasible=False action_idx=75
+13:27:01 INFO: [Epoch 1/1] Step 30/64 (global 30) inst=u120_01 reward=1.0000 rc=0.0000 infeasible=False action_idx=188
+13:27:17 INFO: [Epoch 1/1] Step 40/64 (global 40) inst=u120_01 reward=1.0000 rc=0.0317 infeasible=False action_idx=111
+13:27:34 INFO: [Epoch 1/1] Step 50/64 (global 50) inst=u120_01 reward=1.0000 rc=0.3552 infeasible=False action_idx=65
+13:27:51 INFO: [Epoch 1/1] Step 60/64 (global 60) inst=u120_01 reward=1.0000 rc=0.0622 infeasible=False action_idx=124
+13:27:57 INFO: [Epoch 1/1] Step 64/64 (global 64) inst=u120_01 reward=1.0000 rc=0.0313 infeasible=False action_idx=9
+13:27:58 INFO: [Epoch 1/1] epoch_summary avg_return=1.0000 avg_rc=0.1183 neg_rc_ratio=0.0000 diversity=2.8750 time_s=109.12 lr=3.000000e-04
+13:27:58 INFO: Saved checkpoint: logs\best_model_epoch1.pt
+13:27:58 INFO: Training finished
+13:32:29 INFO: Starting trainer on device: cuda
+13:32:29 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Falkenauer_U.txt', max_instances=10, hidden_size=128, num_gcn_layers=3, epochs=3, steps_per_epoch=256, ppo_epochs=2, minibatch_size=32, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=False, max_actions_per_stage=50, seed=42, log_interval=50, verbose_steps=False)
+13:32:29 INFO: Parsed 1 instances using fallback parser
+13:32:29 INFO: Loaded 1 instances
+13:32:32 INFO: [Epoch 1/3] Step 50/256 (global 50) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=59
+13:32:33 INFO: [Epoch 1/3] Step 100/256 (global 100) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=21
+13:32:34 INFO: [Epoch 1/3] Step 150/256 (global 150) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=45
+13:32:35 INFO: [Epoch 1/3] Step 200/256 (global 200) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=43
+13:32:35 INFO: [Epoch 1/3] Step 250/256 (global 250) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=21
+13:32:36 INFO: [Epoch 1/3] Step 256/256 (global 256) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=50
+13:32:42 INFO: [Epoch 1/3] epoch_summary avg_return=1.0000 avg_rc=0.0833 neg_rc_ratio=0.0000 diversity=1.6562 time_s=10.27 lr=3.000000e-04
+13:32:42 INFO: Saved checkpoint: logs\best_model_epoch1.pt
+13:32:42 INFO: [Epoch 2/3] Step 50/256 (global 306) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=19
+13:32:43 INFO: [Epoch 2/3] Step 100/256 (global 356) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=53
+13:32:44 INFO: [Epoch 2/3] Step 150/256 (global 406) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=24
+13:32:45 INFO: [Epoch 2/3] Step 200/256 (global 456) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=49
+13:32:46 INFO: [Epoch 2/3] Step 250/256 (global 506) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=8
+13:32:46 INFO: [Epoch 2/3] Step 256/256 (global 512) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=4
+13:32:51 INFO: [Epoch 2/3] epoch_summary avg_return=1.0000 avg_rc=0.0931 neg_rc_ratio=0.0000 diversity=1.7656 time_s=9.84 lr=3.000000e-04
+13:32:52 INFO: [Epoch 3/3] Step 50/256 (global 562) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=29
+13:32:53 INFO: [Epoch 3/3] Step 100/256 (global 612) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=10
+13:32:54 INFO: [Epoch 3/3] Step 150/256 (global 662) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=53
+13:32:54 INFO: [Epoch 3/3] Step 200/256 (global 712) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=28
+13:32:55 INFO: [Epoch 3/3] Step 250/256 (global 762) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=9
+13:32:55 INFO: [Epoch 3/3] Step 256/256 (global 768) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=44
+13:33:02 INFO: [Epoch 3/3] epoch_summary avg_return=1.0000 avg_rc=0.0898 neg_rc_ratio=0.0000 diversity=1.7891 time_s=10.20 lr=3.000000e-04
+13:33:02 INFO: Training finished
+13:35:06 INFO: Starting trainer on device: cuda
+13:35:06 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Falkenauer_U.txt', max_instances=20, hidden_size=128, num_gcn_layers=3, epochs=10, steps_per_epoch=512, ppo_epochs=3, minibatch_size=48, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=False, max_actions_per_stage=100, seed=42, log_interval=100, verbose_steps=False)
+13:35:06 INFO: Parsed 1 instances using fallback parser
+13:35:06 INFO: Loaded 1 instances
+13:35:37 INFO: [Epoch 1/10] Step 100/512 (global 100) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=21
+13:36:06 INFO: [Epoch 1/10] Step 200/512 (global 200) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=90
+13:36:34 INFO: [Epoch 1/10] Step 300/512 (global 300) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=39
+13:37:03 INFO: [Epoch 1/10] Step 400/512 (global 400) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=5
+13:37:32 INFO: [Epoch 1/10] Step 500/512 (global 500) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=8
+13:37:35 INFO: [Epoch 1/10] Step 512/512 (global 512) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=4
+13:37:56 INFO: [Epoch 1/10] epoch_summary avg_return=1.0000 avg_rc=0.1351 neg_rc_ratio=0.0000 diversity=1.8535 time_s=168.54 lr=3.000000e-04
+13:37:56 INFO: Saved checkpoint: logs\best_model_epoch1.pt
+13:38:50 INFO: [Epoch 2/10] Step 100/512 (global 612) inst=u120_00 reward=1.0000 rc=1.0000 infeasible=False action_idx=10
+13:39:45 INFO: [Epoch 2/10] Step 200/512 (global 712) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=28
+13:40:40 INFO: [Epoch 2/10] Step 300/512 (global 812) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=75
+13:41:36 INFO: [Epoch 2/10] Step 400/512 (global 912) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=73
+13:42:33 INFO: [Epoch 2/10] Step 500/512 (global 1012) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=14
+13:42:40 INFO: [Epoch 2/10] Step 512/512 (global 1024) inst=u120_00 reward=1.0000 rc=0.3333 infeasible=False action_idx=43
+13:43:04 INFO: [Epoch 2/10] epoch_summary avg_return=1.0000 avg_rc=0.1784 neg_rc_ratio=0.0000 diversity=1.7402 time_s=307.57 lr=3.000000e-04
+13:43:35 INFO: [Epoch 3/10] Step 100/512 (global 1124) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=74
+13:44:05 INFO: [Epoch 3/10] Step 200/512 (global 1224) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=49
+13:44:35 INFO: [Epoch 3/10] Step 300/512 (global 1324) inst=u120_00 reward=1.0000 rc=0.6667 infeasible=False action_idx=12
+13:45:08 INFO: [Epoch 3/10] Step 400/512 (global 1424) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=51
+13:45:39 INFO: [Epoch 3/10] Step 500/512 (global 1524) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=1
+13:45:43 INFO: [Epoch 3/10] Step 512/512 (global 1536) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=35
+13:46:00 INFO: [Epoch 3/10] epoch_summary avg_return=1.0000 avg_rc=0.1546 neg_rc_ratio=0.0000 diversity=1.8203 time_s=176.46 lr=3.000000e-04
+13:46:29 INFO: [Epoch 4/10] Step 100/512 (global 1636) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=46
+13:47:00 INFO: [Epoch 4/10] Step 200/512 (global 1736) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=20
+13:47:31 INFO: [Epoch 4/10] Step 300/512 (global 1836) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=28
+13:48:02 INFO: [Epoch 4/10] Step 400/512 (global 1936) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=32
+13:48:33 INFO: [Epoch 4/10] Step 500/512 (global 2036) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=48
+13:48:37 INFO: [Epoch 4/10] Step 512/512 (global 2048) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=92
+13:48:55 INFO: [Epoch 4/10] epoch_summary avg_return=1.0000 avg_rc=0.1322 neg_rc_ratio=0.0000 diversity=1.8027 time_s=175.15 lr=3.000000e-04
+13:49:27 INFO: [Epoch 5/10] Step 100/512 (global 2148) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=31
+13:49:57 INFO: [Epoch 5/10] Step 200/512 (global 2248) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=72
+13:50:31 INFO: [Epoch 5/10] Step 300/512 (global 2348) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=11
+13:51:02 INFO: [Epoch 5/10] Step 400/512 (global 2448) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=95
+13:51:32 INFO: [Epoch 5/10] Step 500/512 (global 2548) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=98
+13:51:36 INFO: [Epoch 5/10] Step 512/512 (global 2560) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=61
+13:51:51 INFO: [Epoch 5/10] epoch_summary avg_return=1.0000 avg_rc=0.1270 neg_rc_ratio=0.0000 diversity=1.9102 time_s=175.59 lr=3.000000e-04
+13:52:20 INFO: [Epoch 6/10] Step 100/512 (global 2660) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=81
+13:52:49 INFO: [Epoch 6/10] Step 200/512 (global 2760) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=72
+13:53:19 INFO: [Epoch 6/10] Step 300/512 (global 2860) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=98
+13:53:52 INFO: [Epoch 6/10] Step 400/512 (global 2960) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=65
+13:54:23 INFO: [Epoch 6/10] Step 500/512 (global 3060) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=82
+13:54:27 INFO: [Epoch 6/10] Step 512/512 (global 3072) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=14
+13:54:45 INFO: [Epoch 6/10] epoch_summary avg_return=1.0000 avg_rc=0.1042 neg_rc_ratio=0.0000 diversity=1.9688 time_s=174.15 lr=3.000000e-04
+13:55:16 INFO: [Epoch 7/10] Step 100/512 (global 3172) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=73
+13:55:48 INFO: [Epoch 7/10] Step 200/512 (global 3272) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=63
+13:56:19 INFO: [Epoch 7/10] Step 300/512 (global 3372) inst=u120_00 reward=1.0000 rc=0.5000 infeasible=False action_idx=34
+13:56:52 INFO: [Epoch 7/10] Step 400/512 (global 3472) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=4
+13:57:25 INFO: [Epoch 7/10] Step 500/512 (global 3572) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=28
+13:57:29 INFO: [Epoch 7/10] Step 512/512 (global 3584) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=93
+13:57:49 INFO: [Epoch 7/10] epoch_summary avg_return=1.0000 avg_rc=0.0895 neg_rc_ratio=0.0000 diversity=1.9297 time_s=183.69 lr=3.000000e-04
+13:58:33 INFO: [Epoch 8/10] Step 100/512 (global 3684) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=7
+13:59:28 INFO: [Epoch 8/10] Step 200/512 (global 3784) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=40
+14:00:24 INFO: [Epoch 8/10] Step 300/512 (global 3884) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=0
+14:01:18 INFO: [Epoch 8/10] Step 400/512 (global 3984) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=3
+14:02:13 INFO: [Epoch 8/10] Step 500/512 (global 4084) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=98
+14:02:19 INFO: [Epoch 8/10] Step 512/512 (global 4096) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=32
+14:02:39 INFO: [Epoch 8/10] epoch_summary avg_return=1.0000 avg_rc=0.0921 neg_rc_ratio=0.0000 diversity=1.9707 time_s=289.92 lr=3.000000e-04
+14:03:12 INFO: [Epoch 9/10] Step 100/512 (global 4196) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=8
+14:03:43 INFO: [Epoch 9/10] Step 200/512 (global 4296) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=51
+14:04:15 INFO: [Epoch 9/10] Step 300/512 (global 4396) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=76
+14:04:45 INFO: [Epoch 9/10] Step 400/512 (global 4496) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=65
+14:05:18 INFO: [Epoch 9/10] Step 500/512 (global 4596) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=4
+14:05:22 INFO: [Epoch 9/10] Step 512/512 (global 4608) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=8
+14:05:41 INFO: [Epoch 9/10] epoch_summary avg_return=1.0000 avg_rc=0.0859 neg_rc_ratio=0.0000 diversity=1.9297 time_s=181.77 lr=3.000000e-04
+14:06:12 INFO: [Epoch 10/10] Step 100/512 (global 4708) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=57
+14:06:43 INFO: [Epoch 10/10] Step 200/512 (global 4808) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=99
+14:07:13 INFO: [Epoch 10/10] Step 300/512 (global 4908) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=55
+14:07:42 INFO: [Epoch 10/10] Step 400/512 (global 5008) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=91
+14:08:11 INFO: [Epoch 10/10] Step 500/512 (global 5108) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=98
+14:08:14 INFO: [Epoch 10/10] Step 512/512 (global 5120) inst=u120_00 reward=1.0000 rc=0.0000 infeasible=False action_idx=42
+14:08:31 INFO: [Epoch 10/10] epoch_summary avg_return=1.0000 avg_rc=0.0876 neg_rc_ratio=0.0000 diversity=1.9512 time_s=169.93 lr=3.000000e-04
+14:08:31 INFO: Saved checkpoint: logs\model_epoch10.pt
+14:08:31 INFO: Training finished
+15:49:55 INFO: Starting trainer on device: cuda
+15:49:55 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Scholl 1.txt', max_instances=2, hidden_size=128, num_gcn_layers=3, epochs=1, steps_per_epoch=64, ppo_epochs=1, minibatch_size=8, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=False, max_actions_per_stage=200, seed=42, log_interval=10, verbose_steps=False, dump_step_csv=True, dump_epoch_json=True, use_gurobi=False, cg_time_limit=None, cg_verbose=False)
+15:49:55 INFO: Parsed 20 instances using fallback parser
+15:49:55 INFO: Loaded 2 instances
+15:50:02 INFO: [Epoch 1/1] Step 10/64 (global 10) inst=u120_01 reward=1.0000 rc=0.8000 infeasible=False action_idx=52
+15:50:05 INFO: [Epoch 1/1] Step 20/64 (global 20) inst=u120_01 reward=1.0000 rc=0.5000 infeasible=False action_idx=7
+15:50:08 INFO: [Epoch 1/1] Step 30/64 (global 30) inst=u120_01 reward=1.0000 rc=0.9000 infeasible=False action_idx=42
+15:50:10 INFO: [Epoch 1/1] Step 40/64 (global 40) inst=u120_01 reward=1.0000 rc=0.5000 infeasible=False action_idx=6
+15:50:12 INFO: [Epoch 1/1] Step 50/64 (global 50) inst=u120_01 reward=1.0000 rc=0.9000 infeasible=False action_idx=65
+15:50:14 INFO: [Epoch 1/1] Step 60/64 (global 60) inst=u120_01 reward=1.0000 rc=0.5000 infeasible=False action_idx=7
+15:50:14 INFO: [Epoch 1/1] Step 64/64 (global 64) inst=u120_01 reward=1.0000 rc=0.6000 infeasible=False action_idx=9
+15:50:15 INFO: [Epoch 1/1] epoch_summary avg_return=1.0000 avg_rc=0.7750 neg_rc_ratio=0.0000 diversity=2.2500 time_s=17.37 lr=3.000000e-04
+15:50:15 INFO: Saved checkpoint: logs\best_model_epoch1.pt
+15:50:15 INFO: Training finished
+15:51:06 INFO: Starting trainer on device: cuda
+15:51:06 INFO: Args: Namespace(data_path='C:\\Users\\asus\\Desktop\\科研\\数据集\\Scholl 1.txt', max_instances=20, hidden_size=128, num_gcn_layers=3, epochs=10, steps_per_epoch=512, ppo_epochs=3, minibatch_size=48, lr=0.0003, final_lr=1e-06, use_lr_decay=False, gamma=0.99, gae_lambda=0.95, clip_epsilon=0.2, value_coef=0.5, entropy_coef=0.01, max_grad_norm=0.5, save_interval=10, log_dir='logs', use_cuda=True, max_path_len=200, reward_mode='unit', use_monotonicity_cut=False, max_actions_per_stage=100, seed=42, log_interval=100, verbose_steps=False, dump_step_csv=False, dump_epoch_json=True, use_gurobi=True, cg_time_limit=5.0, cg_verbose=False)
+15:51:06 INFO: Parsed 20 instances using fallback parser
+15:51:06 INFO: Loaded 20 instances
+15:51:56 INFO: [Epoch 1/10] Step 100/512 (global 100) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=21
+15:52:41 INFO: [Epoch 1/10] Step 200/512 (global 200) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=43
+15:53:30 INFO: [Epoch 1/10] Step 300/512 (global 300) inst=u120_19 reward=1.0000 rc=0.7071 infeasible=False action_idx=39
+15:54:19 INFO: [Epoch 1/10] Step 400/512 (global 400) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=5
+15:55:08 INFO: [Epoch 1/10] Step 500/512 (global 500) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=8
+15:55:12 INFO: [Epoch 1/10] Step 512/512 (global 512) inst=u120_11 reward=1.0000 rc=0.0000 infeasible=False action_idx=4
+15:55:29 INFO: [Epoch 1/10] epoch_summary avg_return=1.0000 avg_rc=0.2186 neg_rc_ratio=0.0000 diversity=2.3516 time_s=261.21 lr=3.000000e-04
+15:55:29 INFO: Saved checkpoint: logs\best_model_epoch1.pt
+15:55:56 INFO: [Epoch 2/10] Step 100/512 (global 612) inst=u120_19 reward=1.0000 rc=0.7500 infeasible=False action_idx=10
+15:56:23 INFO: [Epoch 2/10] Step 200/512 (global 712) inst=u120_19 reward=1.0000 rc=0.6414 infeasible=False action_idx=28
+15:56:49 INFO: [Epoch 2/10] Step 300/512 (global 812) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=3
+15:57:15 INFO: [Epoch 2/10] Step 400/512 (global 912) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=73
+15:57:41 INFO: [Epoch 2/10] Step 500/512 (global 1012) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=66
+15:57:45 INFO: [Epoch 2/10] Step 512/512 (global 1024) inst=u120_11 reward=1.0000 rc=0.0000 infeasible=False action_idx=66
+15:58:03 INFO: [Epoch 2/10] epoch_summary avg_return=1.0000 avg_rc=0.1763 neg_rc_ratio=0.0000 diversity=2.5273 time_s=154.45 lr=3.000000e-04
+15:58:32 INFO: [Epoch 3/10] Step 100/512 (global 1124) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=74
+15:59:00 INFO: [Epoch 3/10] Step 200/512 (global 1224) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=49
+15:59:28 INFO: [Epoch 3/10] Step 300/512 (global 1324) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=88
+15:59:57 INFO: [Epoch 3/10] Step 400/512 (global 1424) inst=u120_19 reward=1.0000 rc=0.5000 infeasible=False action_idx=51
+16:00:37 INFO: [Epoch 3/10] Step 500/512 (global 1524) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=1
+16:00:43 INFO: [Epoch 3/10] Step 512/512 (global 1536) inst=u120_11 reward=1.0000 rc=0.0000 infeasible=False action_idx=35
+16:01:21 INFO: [Epoch 3/10] epoch_summary avg_return=1.0000 avg_rc=0.1999 neg_rc_ratio=0.0000 diversity=2.5527 time_s=197.99 lr=3.000000e-04
+16:02:10 INFO: [Epoch 4/10] Step 100/512 (global 1636) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=46
+16:02:55 INFO: [Epoch 4/10] Step 200/512 (global 1736) inst=u120_19 reward=1.0000 rc=0.6667 infeasible=False action_idx=20
+16:03:21 INFO: [Epoch 4/10] Step 300/512 (global 1836) inst=u120_19 reward=1.0000 rc=0.6414 infeasible=False action_idx=28
+16:03:48 INFO: [Epoch 4/10] Step 400/512 (global 1936) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=32
+16:04:14 INFO: [Epoch 4/10] Step 500/512 (global 2036) inst=u120_19 reward=1.0000 rc=0.5845 infeasible=False action_idx=48
+16:04:17 INFO: [Epoch 4/10] Step 512/512 (global 2048) inst=u120_11 reward=1.0000 rc=0.0000 infeasible=False action_idx=92
+16:04:32 INFO: [Epoch 4/10] epoch_summary avg_return=1.0000 avg_rc=0.2024 neg_rc_ratio=0.0000 diversity=2.3789 time_s=191.15 lr=3.000000e-04
+16:04:59 INFO: [Epoch 5/10] Step 100/512 (global 2148) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=31
+16:05:25 INFO: [Epoch 5/10] Step 200/512 (global 2248) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=72
+16:05:51 INFO: [Epoch 5/10] Step 300/512 (global 2348) inst=u120_19 reward=1.0000 rc=1.0000 infeasible=False action_idx=11
+16:06:17 INFO: [Epoch 5/10] Step 400/512 (global 2448) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=74
+16:06:44 INFO: [Epoch 5/10] Step 500/512 (global 2548) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=98
+16:06:47 INFO: [Epoch 5/10] Step 512/512 (global 2560) inst=u120_11 reward=1.0000 rc=0.0000 infeasible=False action_idx=61
+16:07:05 INFO: [Epoch 5/10] epoch_summary avg_return=1.0000 avg_rc=0.2093 neg_rc_ratio=0.0000 diversity=2.1738 time_s=152.56 lr=3.000000e-04
+16:07:32 INFO: [Epoch 6/10] Step 100/512 (global 2660) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=45
+16:08:00 INFO: [Epoch 6/10] Step 200/512 (global 2760) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=72
+16:08:28 INFO: [Epoch 6/10] Step 300/512 (global 2860) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=98
+16:08:56 INFO: [Epoch 6/10] Step 400/512 (global 2960) inst=u120_19 reward=1.0000 rc=0.7729 infeasible=False action_idx=41
+16:09:24 INFO: [Epoch 6/10] Step 500/512 (global 3060) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=37
+16:09:27 INFO: [Epoch 6/10] Step 512/512 (global 3072) inst=u120_11 reward=1.0000 rc=1.0000 infeasible=False action_idx=14
+16:09:47 INFO: [Epoch 6/10] epoch_summary avg_return=1.0000 avg_rc=0.2042 neg_rc_ratio=0.0000 diversity=2.3184 time_s=161.65 lr=3.000000e-04
+16:10:16 INFO: [Epoch 7/10] Step 100/512 (global 3172) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=73
+16:10:45 INFO: [Epoch 7/10] Step 200/512 (global 3272) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=63
+16:11:17 INFO: [Epoch 7/10] Step 300/512 (global 3372) inst=u120_19 reward=1.0000 rc=0.4571 infeasible=False action_idx=34
+16:12:05 INFO: [Epoch 7/10] Step 400/512 (global 3472) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=4
+16:12:58 INFO: [Epoch 7/10] Step 500/512 (global 3572) inst=u120_19 reward=1.0000 rc=0.6414 infeasible=False action_idx=28
+16:13:04 INFO: [Epoch 7/10] Step 512/512 (global 3584) inst=u120_11 reward=1.0000 rc=0.3333 infeasible=False action_idx=70
+16:13:41 INFO: [Epoch 7/10] epoch_summary avg_return=1.0000 avg_rc=0.1722 neg_rc_ratio=0.0000 diversity=2.5059 time_s=234.80 lr=3.000000e-04
+16:14:27 INFO: [Epoch 8/10] Step 100/512 (global 3684) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=7
+16:15:13 INFO: [Epoch 8/10] Step 200/512 (global 3784) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=81
+16:15:41 INFO: [Epoch 8/10] Step 300/512 (global 3884) inst=u120_19 reward=1.0000 rc=0.6212 infeasible=False action_idx=44
+16:16:07 INFO: [Epoch 8/10] Step 400/512 (global 3984) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=3
+16:16:35 INFO: [Epoch 8/10] Step 500/512 (global 4084) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=98
+16:16:39 INFO: [Epoch 8/10] Step 512/512 (global 4096) inst=u120_11 reward=1.0000 rc=0.6667 infeasible=False action_idx=32
+16:16:58 INFO: [Epoch 8/10] epoch_summary avg_return=1.0000 avg_rc=0.1701 neg_rc_ratio=0.0000 diversity=2.6836 time_s=196.70 lr=3.000000e-04
+16:17:37 INFO: [Epoch 9/10] Step 100/512 (global 4196) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=8
+16:18:08 INFO: [Epoch 9/10] Step 200/512 (global 4296) inst=u120_19 reward=1.0000 rc=0.5000 infeasible=False action_idx=51
+16:18:34 INFO: [Epoch 9/10] Step 300/512 (global 4396) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=45
+16:19:01 INFO: [Epoch 9/10] Step 400/512 (global 4496) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=65
+16:19:28 INFO: [Epoch 9/10] Step 500/512 (global 4596) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=46
+16:19:31 INFO: [Epoch 9/10] Step 512/512 (global 4608) inst=u120_11 reward=1.0000 rc=0.6667 infeasible=False action_idx=8
+16:19:49 INFO: [Epoch 9/10] epoch_summary avg_return=1.0000 avg_rc=0.1522 neg_rc_ratio=0.0000 diversity=2.6191 time_s=170.61 lr=3.000000e-04
+16:20:15 INFO: [Epoch 10/10] Step 100/512 (global 4708) inst=u120_19 reward=1.0000 rc=1.0000 infeasible=False action_idx=57
+16:20:42 INFO: [Epoch 10/10] Step 200/512 (global 4808) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=99
+16:21:11 INFO: [Epoch 10/10] Step 300/512 (global 4908) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=55
+16:21:40 INFO: [Epoch 10/10] Step 400/512 (global 5008) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=91
+16:22:13 INFO: [Epoch 10/10] Step 500/512 (global 5108) inst=u120_19 reward=1.0000 rc=0.0000 infeasible=False action_idx=98
+16:22:16 INFO: [Epoch 10/10] Step 512/512 (global 5120) inst=u120_11 reward=1.0000 rc=0.6667 infeasible=False action_idx=42
+16:22:37 INFO: [Epoch 10/10] epoch_summary avg_return=1.0000 avg_rc=0.1614 neg_rc_ratio=0.0000 diversity=2.6348 time_s=167.70 lr=3.000000e-04
+16:22:37 INFO: Saved checkpoint: logs\model_epoch10.pt
+16:22:37 INFO: Training finished
