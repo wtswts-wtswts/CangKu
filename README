@@ -1,0 +1,48 @@
+# 数字信号处理大作业 — Python GUI 工具
+
+简介
+- 一个用 Python 实现的桌面 GUI 工具，支持语音、图像、视频的基本数字信号处理：
+  - 语音：去噪（spectral gating）、去背景音（基于噪声剖面做谱减）、或同时执行
+  - 图像：去噪（OpenCV 非局部均值）、去模糊（Richardson–Lucy 反褶积）、或同时执行
+  - 视频：对视频的图像流与音频流分别应用上面的处理，合成输出视频
+
+主要技术/库
+- PySimpleGUI — 简单的 GUI
+- librosa, soundfile — 音频读写与 STFT 处理
+- numpy, scipy — 数值计算 / 信号处理
+- opencv-python (cv2) — 图片读取/保存与去噪算法
+- scikit-image — Richardson–Lucy 去卷积（图像去模糊）
+- moviepy — 视频读写、音轨抽取与合成
+
+文件结构（示例）
+- app.py — 主 GUI 与流程控制
+- processors/audio_processor.py — 语音处理函数
+- processors/image_processor.py — 图像处理函数
+- processors/video_processor.py — 视频处理函数（调用 audio & image）
+- requirements.txt — 依赖列表
+
+安装与运行
+1. 建议使用 Python 3.8+，建立虚拟环境：
+   python -m venv venv
+   source venv/bin/activate  # macOS / Linux
+   venv\Scripts\activate     # Windows
+
+2. 安装依赖：
+   pip install -r requirements.txt
+
+3. 运行 GUI：
+   python app.py
+
+使用说明（GUI）
+- 选择处理模式：Audio / Image / Video
+- 选择文件（单文件）
+- 对应模式出现该模式的选项（去噪、去背景音、去模糊等）
+- 选择输出文件夹（可选，默认在输入文件同目录生成带后缀的文件）
+- 点击 Start 开始处理，GUI 会显示进度与日志
+
+实现说明与注意事项
+- 这里实现的是经典 DSP 方法的“工程级示例”，而非训练型深度学习模型。对重噪、高失真场景效果有限，但便于理解与拓展。
+- 视频处理逐帧处理图像部分，效率受视频分辨率与帧率影响；对于较长或高分辨率视频建议在命令行环境中运行并耐心等待或裁剪处理区域。
+- 若需更强的去噪/去混响/去模糊效果，可替换模块为深度学习模型（如 RNNoise, Demucs, DeblurGAN 等）。
+
+接下来我将把实现代码给你 —— 包含 GUI 主程序与处理模块。运行前请先安装 requirements.txt 里的依赖。

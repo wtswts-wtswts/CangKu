@@ -1,0 +1,9 @@
+PySimpleGUI>=4.60.0
+numpy>=1.21
+scipy>=1.7
+librosa>=0.9
+soundfile>=0.12
+opencv-python>=4.5
+scikit-image>=0.19
+moviepy>=1.0.3
+tqdm>=4.64
