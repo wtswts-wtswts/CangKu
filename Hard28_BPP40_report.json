@@ -1,0 +1,12 @@
+{
+  "L": 1000,
+  "m": 144,
+  "total_bars": 60,
+  "total_used_len": 59073,
+  "total_trim": 927,
+  "demand_total_pieces": 160,
+  "produced_total_pieces": 162,
+  "oversupply_total_pieces": 2,
+  "shortage_total_pieces": 0,
+  "is_feasible_cover": true
+}
