@@ -1,0 +1,26 @@
+# Windows 路径约定
+# 工程根目录: C:\Users\asus\Desktop\最终版本
+# 数据集目录: C:\Users\asus\Desktop\最终版本\fiber
+# 输出目录:   C:\Users\asus\Desktop\最终版本\output
+
+# 1) 单实例（fiber06_5180.txt）
+python run_txt_instances_rc1.py ^
+  --file "C:\Users\asus\Desktop\最终版本\fiber\fiber06_5180.txt" ^
+  --save-dir "C:\Users\asus\Desktop\最终版本\output" ^
+  --load-weights "C:\Users\asus\Desktop\最终版本\model_state.pth" ^
+  --device cpu --solver gurobi --timelimit 0.2 ^
+  --rl-topk 3 --util-min-aux 0.8 ^
+  --mini-pool-cap 10 --mini-pool-max-steps 5 --mini-ilp-timelimit 0.5 ^
+  --tail-drop-last 1 --tail-util-threshold 0.6 ^
+  --log-trace --trace-json "C:\Users\asus\Desktop\最终版本\output\fiber06_5180_trace.json"
+
+# 2) 批量（全数据集 + 汇总CSV，含 LB 前后）
+python run_dataset_and_summarize1.py ^
+  --data-dir "C:\Users\asus\Desktop\最终版本\fiber" ^
+  --out-dir "C:\Users\asus\Desktop\最终版本\output" ^
+  --csv-out "C:\Users\asus\Desktop\最终版本\output\summary.csv" ^
+  --weights "C:\Users\asus\Desktop\最终版本\model_state.pth" ^
+  --device cpu --solver gurobi ^
+  --rl-topk 3 --util-min-aux 0.8 ^
+  --mini-pool-cap 10 --mini-pool-max-steps 5 --mini-ilp-timelimit 0.5 ^
+  --tail-drop-last 1 --tail-util-threshold 0.6

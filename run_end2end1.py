@@ -4,7 +4,7 @@ run_end2end.py (latest)
 
 End-to-end convenience runner:
 - Stage1: run_txt_instances_rc over a directory (or a single file).
-- Stage2 (optional): invoke combined_phase2_then_lb.py externally (kept as user workflow).
+- Stage2 (optional): invoke combined_phase2_then_lb1.py externally (kept as user workflow).
 
 This script mainly exists to keep your previous entrypoint stable.
 """
@@ -39,7 +39,7 @@ def main():
     args = p.parse_args()
 
     cmd = [
-        sys.executable, "run_txt_instances_rc.py",
+        sys.executable, "run_txt_instances_rc1.py",
         "--dir", args.dir,
         "--save-dir", args.out,
         "--load-weights", args.weights,
