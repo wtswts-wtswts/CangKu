@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Batch runner for 3-stage pipeline:
-  Stage1: run_txt_instances_rc.py  -> produces *_pool.npy, *_report.json, *_sequence.json, *_info.json
-  Stage2: combined_phase2_then_lb.py (phase2 + LB to compress patterns)
-  Stage3: combined_phase2_then_lb.py --stage3-enable (epsilon-constraint on patterns, min bars, optional LB)
+  Stage1: run_txt_instances_rc1.py  -> produces *_pool.npy, *_report.json, *_sequence.json, *_info.json
+  Stage2: combined_phase2_then_lb1.py (phase2 + LB to compress patterns)
+  Stage3: combined_phase2_then_lb1.py --stage3-enable (epsilon-constraint on patterns, min bars, optional LB)
 
 Outputs:
   - per instance: stage1 outputs in out-dir
@@ -194,6 +194,35 @@ def try_load_stage_solution_metrics(sol_path: Path, prefix: str) -> Dict[str, An
     return out
 
 
+
+
+def try_load_phase2_vs_lb_metrics(sol_path: Path) -> Dict[str, Any]:
+    out = {
+        "lb_before_bars": None,
+        "lb_before_patterns": None,
+        "lb_before_trimloss_pct": None,
+        "lb_after_bars": None,
+        "lb_after_patterns": None,
+        "lb_after_trimloss_pct": None,
+    }
+    if not sol_path.exists():
+        return out
+    try:
+        j = read_json(sol_path)
+        p2 = j.get("phase2_summary", {}) if isinstance(j, dict) else {}
+        fin = j.get("final", {}) if isinstance(j, dict) else {}
+        if isinstance(p2, dict):
+            out["lb_before_bars"] = p2.get("total_bars")
+            out["lb_before_patterns"] = p2.get("num_unique_patterns")
+            out["lb_before_trimloss_pct"] = p2.get("trim_loss_pct_demand")
+        if isinstance(fin, dict):
+            out["lb_after_bars"] = fin.get("total_bars")
+            out["lb_after_patterns"] = fin.get("num_unique_patterns")
+            out["lb_after_trimloss_pct"] = fin.get("trim_loss_pct_demand")
+    except Exception:
+        pass
+    return out
+
 def safe_write_csv(csv_path: Path, rows: List[Dict[str, Any]], fieldnames: List[str]) -> Path:
     """
     Write CSV safely:
@@ -253,6 +282,14 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--reuse-m-tau", type=float, default=None)
     p.add_argument("--rc-eps", type=float, default=1e-9)
 
+    p.add_argument("--rl-topk", type=int, default=3)
+    p.add_argument("--util-min-aux", type=float, default=0.8)
+    p.add_argument("--mini-pool-cap", type=int, default=10)
+    p.add_argument("--mini-pool-max-steps", type=int, default=5)
+    p.add_argument("--mini-ilp-timelimit", type=float, default=0.5)
+    p.add_argument("--tail-drop-last", type=int, default=1)
+    p.add_argument("--tail-util-threshold", type=float, default=0.6)
+
     # Stage2 args
     p.add_argument("--bars-delta", type=int, default=0)
     p.add_argument("--phase2-timelimit", type=float, default=0.5)
@@ -301,7 +338,7 @@ def main():
 
         # ---------------- Stage1 ----------------
         cmd1 = [
-            py, "run_txt_instances_rc.py",
+            py, "run_txt_instances_rc1.py",
             "--file", str(fp),
             "--save-dir", str(out_dir),
             "--load-weights", str(args.weights),
@@ -327,6 +364,13 @@ def main():
             "--reuse-m-max", str(args.reuse_m_max),
             "--reuse-m-alpha", str(args.reuse_m_alpha),
             "--rc-eps", str(args.rc_eps),
+            "--rl-topk", str(args.rl_topk),
+            "--util-min-aux", str(args.util_min_aux),
+            "--mini-pool-cap", str(args.mini_pool_cap),
+            "--mini-pool-max-steps", str(args.mini_pool_max_steps),
+            "--mini-ilp-timelimit", str(args.mini_ilp_timelimit),
+            "--tail-drop-last", str(args.tail_drop_last),
+            "--tail-util-threshold", str(args.tail_util_threshold),
         ]
         if args.reuse_m_tau is not None:
             cmd1 += ["--reuse-m-tau", str(args.reuse_m_tau)]
@@ -355,7 +399,7 @@ def main():
 
         out_prefix = out_dir / f"{stem}_phase2lb"
         cmd2 = [
-            py, "combined_phase2_then_lb.py",
+            py, "combined_phase2_then_lb1.py",
             "--mode", "combined",
             "--pool", str(pool_path),
             "--report", str(rep_path),
@@ -405,6 +449,7 @@ def main():
         }
 
         dt = time.time() - t0
+        lb_cmp = try_load_phase2_vs_lb_metrics(s2_sol)
         row = {
             "instance": stem,
             "status": "ok",
@@ -414,6 +459,13 @@ def main():
             "stage1_patterns": stage1["stage1_patterns"],
             "stage1_trimloss_pct": stage1["stage1_trimloss_pct"],
             "stage1_counter": stage1["stage1_counter"],
+
+            "lb_before_bars": lb_cmp["lb_before_bars"],
+            "lb_before_patterns": lb_cmp["lb_before_patterns"],
+            "lb_before_trimloss_pct": lb_cmp["lb_before_trimloss_pct"],
+            "lb_after_bars": lb_cmp["lb_after_bars"],
+            "lb_after_patterns": lb_cmp["lb_after_patterns"],
+            "lb_after_trimloss_pct": lb_cmp["lb_after_trimloss_pct"],
 
             "stage2_bars": stage2["stage2_bars"],
             "stage2_patterns": stage2["stage2_patterns"],
@@ -431,6 +483,8 @@ def main():
     fieldnames = [
         "instance", "status", "runtime_sec",
         "stage1_bars", "stage1_patterns", "stage1_trimloss_pct", "stage1_counter",
+        "lb_before_bars", "lb_before_patterns", "lb_before_trimloss_pct",
+        "lb_after_bars", "lb_after_patterns", "lb_after_trimloss_pct",
         "stage2_bars", "stage2_patterns", "stage2_trimloss_pct",
         "stage3_bars", "stage3_patterns", "stage3_trimloss_pct",
     ]

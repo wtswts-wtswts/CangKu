@@ -10,10 +10,10 @@ from typing import Dict, Any
 import numpy as np
 import torch
 
-import pruning as pr
-from policy import Policy
-from rl_rollout_rc import rollout_generate_plan
-from instance_parser import parse_instance_txt_flexible
+import pruning1 as pr
+from policy1 import Policy
+from rl_rollout_rc1 import rollout_generate_plan
+from instance_parser1 import parse_instance_txt_flexible
 
 
 def to_jsonable(obj):
@@ -97,7 +97,10 @@ def run_one(path: str, load_weights: str, device: str, save_dir: str, solver: st
             ilp_enable: bool, ilp_delta: int, ilp_timelimit: float, ilp_max_cols: int,
             ilp_topk: int, ilp_topk_mult: float, ilp_topk_min: int, ilp_topk_max: int,
             ilp_hist: int, ilp_hist_mult: float, ilp_hist_min: int, ilp_hist_max: int,
-            ilp_relax_on_infeasible: bool, ilp_relax_max: int):
+            ilp_relax_on_infeasible: bool, ilp_relax_max: int,
+            rl_topk: int, util_min_aux: float, mini_pool_cap: int, mini_pool_max_steps: int,
+            mini_ilp_timelimit: float, tail_drop_last: int, tail_util_threshold: float,
+            log_trace: bool, trace_json: str):
     print(f"==> 解析文件：{path}")
     # parse_instance_txt_flexible 返回 tuple(w, d, L, meta)
     w, d, L, meta = parse_instance_txt_flexible(path)
@@ -157,6 +160,15 @@ def run_one(path: str, load_weights: str, device: str, save_dir: str, solver: st
         ilp_hist_max=int(ilp_hist_max),
         ilp_relax_on_infeasible=bool(ilp_relax_on_infeasible),
         ilp_relax_max=int(ilp_relax_max),
+        rl_topk=int(rl_topk),
+        util_min_aux=float(util_min_aux),
+        mini_pool_cap=int(mini_pool_cap),
+        mini_pool_max_steps=int(mini_pool_max_steps),
+        mini_ilp_timelimit=float(mini_ilp_timelimit),
+        tail_drop_last=int(tail_drop_last),
+        tail_util_threshold=float(tail_util_threshold),
+        log_trace=bool(log_trace),
+        trace_json=str(trace_json or ""),
     )
     info["parse_meta"] = meta
 
@@ -241,6 +253,16 @@ def main():
     ap.add_argument('--ilp-relax-on-infeasible', action='store_true', help='若 infeasible，允许自动放宽 delta（默认关闭）')
     ap.add_argument('--ilp-relax-max', type=int, default=2, help='最多放宽次数（delta+0..delta+relax_max）')
 
+    ap.add_argument('--rl-topk', type=int, default=3, help='每步 RL 候选 top-k')
+    ap.add_argument('--util-min-aux', type=float, default=0.8, help='top2/top3 入小列池的最低利用率')
+    ap.add_argument('--mini-pool-cap', type=int, default=10, help='小列池容量（完整加入后触发）')
+    ap.add_argument('--mini-pool-max-steps', type=int, default=5, help='窗口最大 step 数（达到即触发）')
+    ap.add_argument('--mini-ilp-timelimit', type=float, default=0.5, help='小列池 ILP 时间上限（秒）')
+    ap.add_argument('--tail-drop-last', type=int, default=1, help='1=启用拆最后一根')
+    ap.add_argument('--tail-util-threshold', type=float, default=0.6, help='最后一根利用率阈值')
+    ap.add_argument('--log-trace', action='store_true', help='打印窗口 trace 摘要')
+    ap.add_argument('--trace-json', type=str, default='', help='窗口 trace 输出 json 路径')
+
     args = ap.parse_args()
 
     # pruning config (C3 only). Keep --prune-c3 for backward compatibility.
@@ -262,7 +284,10 @@ def main():
             args.ilp_enable, args.ilp_delta, args.ilp_timelimit, args.ilp_max_cols,
             args.ilp_topk, args.ilp_topk_mult, args.ilp_topk_min, args.ilp_topk_max,
             args.ilp_hist, args.ilp_hist_mult, args.ilp_hist_min, args.ilp_hist_max,
-            args.ilp_relax_on_infeasible, args.ilp_relax_max
+            args.ilp_relax_on_infeasible, args.ilp_relax_max,
+            args.rl_topk, args.util_min_aux, args.mini_pool_cap, args.mini_pool_max_steps,
+            args.mini_ilp_timelimit, args.tail_drop_last, args.tail_util_threshold,
+            args.log_trace, args.trace_json
         )
 
 
